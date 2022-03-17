@@ -1,5 +1,5 @@
 # FLTrust_pytorch
-Some codes refers to https://github.com/WHDY/FedAvg
+Some codes refers to https://github.com/WHDY/FedAvg  
 paper FLTrust from https://arxiv.org/pdf/2012.13995.pdf
 
 The central dataset(100 samples) is random selected from test dataset.
