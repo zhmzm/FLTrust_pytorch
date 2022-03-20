@@ -3,6 +3,7 @@ import torch
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 from getData import GetDataSet
+import copy
 
 
 class client(object):
@@ -55,7 +56,7 @@ class ClientsGroup(object):
                 opti.step()
                 opti.zero_grad()
 
-        return Net.state_dict()
+        return copy.deepcopy(Net.state_dict())
 
 
     def dataSetBalanceAllocation(self):
