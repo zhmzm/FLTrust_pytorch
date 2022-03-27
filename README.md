@@ -1,5 +1,5 @@
 # FLTrust_pytorch 
-Unofficial implementation for FLTrust, if there is any problem, please let me know.
+Unofficial implementation for FLTrust, if there is any problem, please let me know.  
 Some codes refers to https://github.com/WHDY/FedAvg  
 paper FLTrust from https://arxiv.org/pdf/2012.13995.pdf
 
