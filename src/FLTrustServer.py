@@ -15,12 +15,12 @@ def cos(a,b):
         res = 0
     return res
 def model2vector(model):
-    nparr = np.array([])
+    vec = []
     for key, var in model.items():
-        nplist = var.cpu().numpy()
-        nplist = nplist.ravel()
-        nparr = np.append(nparr, nplist)
-    return nparr
+        if key.split('.')[-1] == 'num_batches_tracked' or key.split('.')[-1] == 'running_mean' or key.split('.')[-1] == 'running_var':
+            continue
+        vec.append(var.view(-1))
+    return vec
 def cosScoreAndClipValue(net1, net2):
     '''net1 -> centre, net2 -> local, net3 -> early model'''
     vector1 = model2vector(net1)
