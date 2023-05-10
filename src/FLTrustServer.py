@@ -128,7 +128,7 @@ if __name__=="__main__":
 
         for var in global_parameters:
             #除以所以客户端的信任得分总和
-            global_parameters[var] += (sum_parameters[var] / FLTrustTotalScore + 1e-9)
+            global_parameters[var] += sum_parameters[var] / (FLTrustTotalScore + 1e-9)
 
         with torch.no_grad():
             if (i + 1) % args['val_freq'] == 0:
